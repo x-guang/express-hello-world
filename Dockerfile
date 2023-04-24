@@ -8,7 +8,6 @@ ARG BUILDTIME_ENV
 ENV BUILDTIME_ENV=${BUILDTIME_ENV}
 
 RUN npm i && npm run build || echo "Can't exec build cmd"
-RUN npm start
 
 #FROM nginx:alpine
 
@@ -20,5 +19,7 @@ ENV \
     HOST=0.0.0.0
 
 EXPOSE 8080
+
+RUN npm start
 
 #CMD sh -c "envsubst '\$PORT' < /etc/nginx/conf.d/configfile.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
