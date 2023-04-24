@@ -1,3 +1,6 @@
+# Created by xg
+*.bak
+
 # Logs
 logs
 *.log
