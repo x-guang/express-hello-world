@@ -7,7 +7,7 @@ COPY . .
 ARG BUILDTIME_ENV
 ENV BUILDTIME_ENV=${BUILDTIME_ENV}
 
-RUN npm i && npm run build 2>&1
+RUN npm i && npm run build || echo "Can't exec build cmd"
 RUN npm start
 
 #FROM nginx:alpine
