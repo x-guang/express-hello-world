@@ -20,6 +20,6 @@ ENV \
 
 EXPOSE 8080
 
-CMD sh -c npm start
+CMD sh -c npm run start
 
 #CMD sh -c "envsubst '\$PORT' < /etc/nginx/conf.d/configfile.template > /etc/nginx/conf.d/default.conf && nginx -g 'daemon off;'"
